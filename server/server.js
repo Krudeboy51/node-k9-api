@@ -1,12 +1,12 @@
-const _ = require('lodash')
+const _ = require('lodash');
 var express = require('express');
 var bodyParser = require('body-parser');
-var {ObjectID} = require('mongodb');
+var ObjectID = require('mongodb').ObjectID;
 
-var {mongoose} = require('./db/mogoose');
-var {User} = require('./models/user');
-var {userData} = require('./models/userdata');
-var {authenticate} = require('./middleware/authenticate')
+var mongoose = require('./db/mogoose').mongoose;
+var User = require('./models/user').User;
+var userData = require('./models/userdata').userData;
+var authenticate = require('./middleware/authenticate').authenticate;
 
 
 var app = express();
